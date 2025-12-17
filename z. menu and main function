@@ -1,0 +1,51 @@
+/* ===================== MENU ===================== */
+void menu() {
+    int choice;
+
+    do {
+        printf("\n====== Library Management System ======\n");
+        printf("1. Add Book\n");
+        printf("2. Display All Books\n");
+        printf("3. Search Book\n");
+        printf("4. Issue Book\n");
+        printf("5. Return Book\n");
+        printf("6. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+    if (expected == actual)
+        printf("Test Case 2 Passed\n");
+    else
+        printf("Test Case 2 Failed\n");
+        switch (choice) {
+            case 1:
+                addBook();
+                break;
+            case 2:
+                displayBooks();
+                break;
+            case 3:
+                searchBook();
+                break;
+            case 4:
+                issueBook();
+                break;
+            case 5:
+                returnBook();
+                break;
+            case 6:
+                printf("\nThank you for using Library Management System.\n");
+                break;
+            default:
+                printf("\nInvalid choice. Please try again.\n");
+        }
+    } while (choice != 6);
+}
+
+/* ===================== MAIN FUNCTION ===================== */
+int main() {
+    test_add_book();
+    test_remove_book();
+    menu();
+    return 0;
+}
